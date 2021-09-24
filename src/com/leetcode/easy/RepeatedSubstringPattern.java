@@ -4,8 +4,23 @@ public class RepeatedSubstringPattern {
 
     public static void main(String[] args) {
         // write your code here
-        boolean result = repeatedSubstringPattern1("abcdeabcdeabcde");
+        boolean result = repeatedSubstringPatternMe("aba");
         System.out.println(result);
+    }
+
+    public static boolean repeatedSubstringPatternMe(String str) {
+        int len = str.length();
+        int half = len / 2;
+        while (half != 0) {
+            if (len % half == 0) {
+                int repeat = len / half;
+                String sub = str.substring(0, half);
+                if (sub.repeat(repeat).equals(str))
+                    return true;
+            }
+            half--;
+        }
+        return false;
     }
 
     public static boolean repeatedSubstringPattern1(String str) {
