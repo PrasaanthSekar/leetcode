@@ -7,8 +7,24 @@ public class ClimbingStairs {
 
     public static void main(String[] args) {
         // write your code here
-        int result = climbStairs1(35);
+//        int result = climbStairs1(35);
+        int result = climbStairs(45);
         System.out.println(result);
+    }
+
+    private static int climbStairs(int n) {
+        int[] memo = new int[n + 1];
+        return climbStairsMemo(n, memo);
+    }
+
+
+    private static int climbStairsMemo(int stairs, int[] memo) {
+        if (memo[stairs] != 0) return memo[stairs];
+        if (stairs == 1) return 1;
+        if (stairs == 2) return 2;
+        if (stairs < 1) return 0;
+        memo[stairs] = climbStairsMemo(stairs - 1, memo) + climbStairsMemo(stairs - 2, memo);
+        return memo[stairs];
     }
 
     public static int climbStairs1(int n) {
@@ -36,7 +52,7 @@ public class ClimbingStairs {
     }
 
 
-    public static int climbStairs(int n) {
+    public static int climbStairs2(int n) {
         int[] result = new int[n + 1];
         result[0] = 1;
         result[1] = 1;
