@@ -17,6 +17,9 @@ public class RemoveDuplicatesFromSortedArray {
         for (int element : nums) {
             map.put(element, map.getOrDefault(element, 0) + 1);
         }
+        for (Map.Entry<Integer, Integer> val : map.entrySet()){
+            System.out.println(val.getKey());
+        }
         return map.size();
     }
 }

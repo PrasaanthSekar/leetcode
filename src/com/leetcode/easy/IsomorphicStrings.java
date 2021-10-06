@@ -16,7 +16,7 @@ public class IsomorphicStrings {
 
     public static void main(String[] args) {
         // write your code here
-        boolean result = isIsomorphic("paper", "title");
+        boolean result = isIsomorphic("paper", "tille");
         System.out.println(result);
     }
 
@@ -32,5 +32,27 @@ public class IsomorphicStrings {
             str.append(map.get(s.charAt(i)));
         }
         return str.toString().equals(t);
+    }
+
+    public static boolean isIsomorphicUpdate(String s, String t) {
+        HashMap<Character, Character> map1 = new HashMap<>();
+        HashMap<Character, Character> map2 = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            map1.put(s.charAt(i), t.charAt(i));
+            map2.put(t.charAt(i), s.charAt(i));
+        }
+
+        StringBuilder temp1 = new StringBuilder();
+        for (Map.Entry<Character, Character> map : map1.entrySet()) {
+            temp1.append(map.getValue());
+        }
+
+        StringBuilder temp2 = new StringBuilder();
+        for (Map.Entry<Character, Character> map : map2.entrySet()) {
+            temp2.append(map.getValue());
+        }
+        System.out.println(temp2);
+        return true;
     }
 }

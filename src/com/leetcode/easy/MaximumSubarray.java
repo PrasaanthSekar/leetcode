@@ -4,7 +4,7 @@ public class MaximumSubarray {
 
     public static void main(String[] args) {
         // write your code here
-        int result = kadane(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
+        int result = kadane(new int[]{-1,-2,-3,-4});
         System.out.println(result);
     }
 
@@ -15,7 +15,7 @@ public class MaximumSubarray {
             maxEnding = Math.max(maxEnding + nums[i], nums[i]);
             maxSoFar = Math.max(maxEnding, maxSoFar);
         }
-        return 0;
+        return maxSoFar;
     }
 
     public static int maxSubArray(int[] nums) {
