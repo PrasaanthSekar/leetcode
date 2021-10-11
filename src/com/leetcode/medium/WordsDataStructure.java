@@ -27,6 +27,12 @@ class WordDictionary {
 
     public boolean search(String word) {
 //        if(word.startsWith("."))
+        String s = "adasdasda";
+        for(Character map: s.toCharArray()){
+
+        }
         return words.get(word) > 0;
     }
+
+
 }

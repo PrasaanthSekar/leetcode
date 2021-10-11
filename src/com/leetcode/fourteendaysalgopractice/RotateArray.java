@@ -1,12 +1,16 @@
 package com.leetcode.fourteendaysalgopractice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class RotateArray {
 
     public static void main(String[] args) {
         // write your code here
-        rotate(new int[]{1, 2, 3, 4, 5, 6, 7}, 1);
+//        rotate(new int[]{1, 2, 3, 4, 5, 6, 7}, 1);
+        rotateLeft(new int[]{1, 2, 3, 4, 5}, 4);
     }
 
     public static void rotate(int[] nums, int k) {
@@ -25,5 +29,16 @@ public class RotateArray {
             System.arraycopy(res, 0, nums, 0, res.length);
         }
         System.out.println(Arrays.toString(nums));
+    }
+
+    public static void rotateLeft(int[] a, int d) {
+        int length = a.length;
+        int[] array = new int[length];
+        for (int i = 0; i < length; i++) {
+            int newPos = length - (d - i);
+            array[newPos % length] = a[i];
+        }
+        List<Integer> list = new ArrayList(Collections.singleton(array));
+        System.out.println(Arrays.toString(array));
     }
 }

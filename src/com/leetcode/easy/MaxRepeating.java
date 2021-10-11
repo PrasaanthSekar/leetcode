@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class MaxRepeating {
 
     public static void main(String[] args) {
-        System.out.println(maxRepeating(new int[]{2, 3, 3, 5, 3, 4, 1, 7}, 8, 8));
+//        System.out.println(maxRepeating(new int[]{2, 3, 3, 5, 3, 4, 1, 7}, 8, 8));
+        System.out.println(maxRepeating(new int[]{1, 1, 1, 2, 2, 3}, 8, 8));
     }
 
     public static int maxRepeating(int[] arr, int n, int k) {

@@ -19,7 +19,7 @@ public class CombinationSumII {
         if (target == 0) result.add(new ArrayList<>(list));
         if (target < 0) return;
         for (int i = start; i < ints.length; i++) {
-//            if (i > start && ints[i] == ints[i - 1]) continue;
+            if (i > start && ints[i] == ints[i - 1]) continue;
             list.add(ints[i]);
             findCombo(ints, result, target - ints[i], list, i + 1);
             list.remove(list.size() - 1);

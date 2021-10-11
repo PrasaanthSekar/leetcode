@@ -8,7 +8,7 @@ public class Subsets {
 
     public static void main(String[] args) {
         // write your code here
-        List<List<Integer>> result = subsets(new int[]{1, 2, 3});
+        List<List<Integer>> result = subsets(new int[]{1, 2, 3, 4});
         System.out.println(result);
     }
 
