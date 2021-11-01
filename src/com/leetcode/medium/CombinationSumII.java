@@ -4,7 +4,8 @@ import java.util.*;
 
 public class CombinationSumII {
     public static void main(String[] args) {
-        combinationSum(new int[]{10, 1, 2, 7, 6, 1, 5}, 8);
+//        combinationSum(new int[]{10, 1, 2, 7, 6, 1, 5}, 8);
+        combinationSum(new int[]{1, 2, 3}, 4);
     }
 
     private static void combinationSum(int[] ints, int i) {
