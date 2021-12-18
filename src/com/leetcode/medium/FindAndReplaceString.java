@@ -6,7 +6,7 @@ public class FindAndReplaceString {
 
     public static void main(String[] args) {
         // write your code here
-        String result = findReplaceString("abcd", new int[]{0, 2}, new String[]{"ab", "ec"}, new String[]{"eee", "ffff"});
+        String result = findReplaceString1("abcd", new int[]{0, 2}, new String[]{"a", "cd"}, new String[]{"eee", "ffff"});
         System.out.println(result);
     }
 
@@ -21,5 +21,18 @@ public class FindAndReplaceString {
             }
         }
         return result.toString();
+    }
+
+    public static String findReplaceString1(String s, int[] indices, String[] sources, String[] targets) {
+        StringBuilder builder = new StringBuilder(s);
+        for (int i = 0; i < indices.length; i++) {
+            int len = sources[i].length();
+            String sub = s.substring(indices[i], indices[i] + len);
+            if (sub.equals(sources[i])) {
+                int start = builder.indexOf(sub);
+                builder.replace(start, start + len, targets[i]);
+            }
+        }
+        return builder.toString();
     }
 }

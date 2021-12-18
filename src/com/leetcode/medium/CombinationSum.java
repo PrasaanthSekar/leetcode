@@ -5,7 +5,7 @@ import java.util.*;
 public class CombinationSum {
 
     public static void main(String[] args) {
-        combinationSum(new int[]{1, 2, 3}, 4);
+        combinationSum(new int[]{8,1,8,6, 8}, 12);
     }
 
 

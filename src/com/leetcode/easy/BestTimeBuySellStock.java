@@ -13,8 +13,8 @@ public class BestTimeBuySellStock {
         for (int price : prices) {
             min = Math.min(min, price);
             max = Math.max(price - min, max);
-            if ((price - min) != max)
-                max += Math.max(price - min, max);
+//            if ((price - min) != max)
+//                max += Math.max(price - min, max);
         }
         return max;
     }

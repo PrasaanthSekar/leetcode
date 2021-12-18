@@ -3,7 +3,7 @@ package com.leetcode.easy;
 public class FindPivotIndex {
 
     public static void main(String[] args) {
-        System.out.println(pivotIndex(new int[]{2,1,-1}));
+        System.out.println(pivotIndex(new int[]{2,4,2}));
     }
 
     public static int pivotIndex(int[] nums) {
